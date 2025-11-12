@@ -1,0 +1,11 @@
+name: APS_R
+method:
+  _target_: algo.aps_r.APS_R
+  diffusion_scheduler_config:
+    num_steps: 500
+    schedule: 'vp'
+    timestep: 'vp'
+    scaling: 'vp'
+  threshold: 0.0
+  num_candidates: 64
+  batch_size: 64

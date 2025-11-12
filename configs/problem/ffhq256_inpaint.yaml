@@ -1,0 +1,21 @@
+name: ffhq256-inpaint
+prior: checkpoints/ffhq256.pt
+model:
+  _target_: inverse_problems.image_restore.Inpainting
+  sigma_noise: 0.05
+  mask_type: random  # box / random
+  mask_prob_range: [0.95, 0.96]  # for random
+  resolution: 256
+
+data:
+  _target_: training.dataset.ImageFolder
+  root: data/ffhq256
+  resolution: 256
+  num_channels: 3
+  id_list: 0-99
+
+
+evaluator:
+  _target_: eval.Image
+
+exp_dir: exps/inference/ffhq256-inpaint

@@ -1,0 +1,11 @@
+name: SCG
+method:
+  _target_: algo.scg.SCG
+  diffusion_scheduler_config:
+    num_steps: 500
+    schedule: 'vp'
+    timestep: 'vp'
+    scaling: 'vp'
+  threshold: 0.0
+  num_candidates: 128
+  batch_size: 64

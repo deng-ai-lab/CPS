@@ -1,0 +1,18 @@
+include MANIFEST.in
+include CHANGELOG.txt
+include COPYING.txt
+include README.rst
+include setup.cfg
+include setup.py
+exclude CONTRIBUTING.rst
+
+graft pynfft
+graft doc
+prune doc/build
+
+global-exclude *.pyc
+global-exclude *.pyd
+global-exclude *.pyo
+global-exclude *.so
+global-exclude .git*
+global-exclude *~

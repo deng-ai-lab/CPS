@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: pyNFFT
+Version: 1.4.2
+Summary: A pythonic wrapper around NFFT
+Home-page: https://github.com/ghisvail/pyNFFT.git
+Author: Ghislain Vaillant
+Author-email: ghisvail@gmail.com
+Platform: Linux
+Platform: Unix
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+License-File: COPYING.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: platform
+Dynamic: summary
+
+"The NFFT is a C subroutine library for computing the
+nonequispaced discrete Fourier transform (NDFT) in one or more dimensions, of
+arbitrary input size, and of complex data."
+
+The NFFT library is licensed under GPLv2 and available at:
+    http://www-user.tu-chemnitz.de/~potts/nfft/index.php
+
+This wrapper provides a somewhat Pythonic access to some of the core NFFT
+library functionalities and is largely inspired from the pyFFTW project
+developped by Henry Gomersall (http://hgomersall.github.io/pyFFTW/).
+
+This project is still work in progress and is still considered beta quality. In
+particular, the API is not yet frozen and is likely to change as the
+development continues. Please consult the documentation and changelog for more
+information.
