@@ -58,13 +58,7 @@ class SCG(Algo):
                         denoised_batch = self.net(x_batch / self.scheduler.scaling_steps[i+1], torch.as_tensor(sigma_next).to(x_cur.device))
                         loss_ensemble[k*self.batch_size:(k+1)*self.batch_size] = self.forward_op.loss(denoised_batch, observation)
                     # select the best candidates
-                    # idx = torch.argmin(loss_ensemble)
-                    # 获取排序后的索引（从小到大）
-                    sorted_indices = torch.argsort(loss_ensemble)
-                    # # 选择第二小的索引
-                    idx = sorted_indices[-5]  # 0是最小的，1是第二小的
-                    # idx = torch.randint(0, len(x_candidates), (1,))  
-                    # x_next = x_candidates[idx:idx+1]
+                    idx = torch.argmin(loss_ensemble)
                     x_next = x_cur * scaling_factor + factor * score-(x_candidates[idx:idx+1]-x_cur * scaling_factor - factor * score)
                     loss_scale = loss_ensemble[idx]
                     pbar.set_description(f'Iteration {i + 1}/{num_steps}. Data fitting loss: {torch.sqrt(loss_scale)}')
