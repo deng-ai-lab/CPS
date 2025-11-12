@@ -3,7 +3,7 @@
 Official implementation for: **"Constrained Particle Seeking: Solving Diffusion Inverse Problems with Just Forward Passes"**
 
 <div style="text-align: center;">
-  <img src="assets\graph_00.png" width="550" alt="Graph showing Constrained Particle Seeking high-level diagram">
+  <img src="assets\graph_00.png" width="650" alt="Graph showing Constrained Particle Seeking high-level diagram">
 </div>
 
 ---
@@ -15,7 +15,7 @@ We introduce **Constrained Particle Seeking (CPS)**, a novel, **gradient-free** 
 A key feature of CPS is the efficient incorporation of **constraints** that align the search process with high-density regions of the unconditional prior. This results in a powerful method that achieves high performance while relying solely on **forward passes** of the pre-trained diffusion model and measurement operators, circumventing the need for backpropagation or  gradient estimation.
 
 <div style="text-align: center;">
-  <img src="assets\method3_00.png" width="500" alt="Diagram illustrating the Constrained Particle Seeking method workflow">
+  <img src="assets\method3_00.png" width="550" alt="Diagram illustrating the Constrained Particle Seeking method workflow">
 </div>
 
 ---
@@ -78,5 +78,6 @@ The repository is organized as follows:
   * `/checkpoints`: Pre-trained **model weights** and diffusion checkpoints.
   * `main.py`: The **main execution script** for running experiments.
   * `configs/`: **Configuration files** (using Hydra) defining experiment parameters.
+
 
 
