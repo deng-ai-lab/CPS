@@ -10,7 +10,7 @@ Official implementation for: **"Constrained Particle Seeking: Solving Diffusion 
 
 ## 📄 Abstract
 
-We introduce **Constrained Particle Seeking (CPS)**, a novel, **gradient-free** approach designed to solve diffusion inverse problems. CPS leverages information from *all* candidate particles within a diffusion model's latent space to actively search for the optimal solution.
+We introduce **Constrained Particle Seeking (CPS)**, a novel, **gradient-free** approach designed to solve diffusion inverse problems. CPS leverages information from *all* candidate particles of the diffusion model to actively search for the optimal particle.
 
 A key feature of CPS is the efficient incorporation of **constraints** that align the search process with high-density regions of the unconditional prior. This results in a powerful method that achieves high performance while relying solely on **forward passes** of the pre-trained diffusion model and measurement operators, circumventing the need for backpropagation or  gradient estimation.
 
@@ -78,4 +78,5 @@ The repository is organized as follows:
   * `/checkpoints`: Pre-trained **model weights** and diffusion checkpoints.
   * `main.py`: The **main execution script** for running experiments.
   * `configs/`: **Configuration files** (using Hydra) defining experiment parameters.
+
 
