@@ -35,7 +35,7 @@ Clone the repository and install the required packages:
 
 ```bash
 git clone https://github.com/deng-ai-lab/CPS.git
-cd constrained-particle-seeking
+cd CPS
 pip install -r requirements.txt
 ````
 
@@ -78,6 +78,7 @@ The repository is organized as follows:
   * `/checkpoints`: Pre-trained **model weights** and diffusion checkpoints.
   * `main.py`: The **main execution script** for running experiments.
   * `configs/`: **Configuration files** (using Hydra) defining experiment parameters.
+
 
 
 
